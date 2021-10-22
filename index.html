@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+    <title>ゲーム管理Git</title>
+    <style>
+    </style>
+    <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> -->
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnxhr = document.querySelector('#xhr')
+            const btnjquery = document.querySelector('#jquery')
+            const btnaxios = document.querySelector('#axios')
+            const btnfetch = document.querySelector('#fetch')
+            const result = document.querySelector('#result')
+
+            // axios
+            btnaxios.addEventListener('click', evt => {
+            console.log('axios')
+            axios
+            .post('app.js', 'text=testtesttest', {
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            })
+            .then(resp => {
+            result.innerHTML = resp.data
+            })a
+        })
+        })
+        // $(function(){
+        //     $(document).on("click",".fm",function(){
+        //         $.ajax({
+        //             url: "app.js",
+        //             type: "GET",
+        //             async: true,
+        //             data: null,
+        //             dataType: "json",
+        //             success: function (json) {
+        //                 //成功時の処理
+        //                 if (json.result) {
+        //                     alert(1);
+        //                 }
+        //             },
+        //             error: function () {
+        //                 alert(2);
+        //             }
+        //         });
+        //     });
+        // })
+    </script>
+</head>
+<body>
+<header>
+    <h1>ゲーム管理</h1>
+</header>
+<nav>
+</nav>
+<main>
+    <div>郵便番号:<input type="text" name="zip"></div>
+    <button id="axios">OK</button>
+</main>
+<footer>
+</footer>
+</div>
+</body>
+</html>
